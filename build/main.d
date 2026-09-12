@@ -1,4 +1,4 @@
-main.o: C:/git/personal/dagger_3ds/source/main.c \
+main.o: C:/git/personal/dagger_3ds/source/main.cpp \
  C:/devkitPro/libctru/include/3ds.h \
  C:/devkitPro/libctru/include/3ds/types.h \
  C:/devkitPro/libctru/include/3ds/result.h \
@@ -85,7 +85,26 @@ main.o: C:/git/personal/dagger_3ds/source/main.c \
  C:/devkitPro/libctru/include/3ds/romfs.h \
  C:/devkitPro/libctru/include/3ds/font.h \
  C:/devkitPro/libctru/include/3ds/gdbhio_dev.h \
- C:/devkitPro/libctru/include/3ds/3dslink.h
+ C:/devkitPro/libctru/include/3ds/3dslink.h \
+ C:/git/personal/dagger_3ds/source/render.h \
+ C:/devkitPro/libctru/include/citro3d.h \
+ C:/devkitPro/libctru/include/c3d/types.h \
+ C:/devkitPro/libctru/include/c3d/maths.h \
+ C:/devkitPro/libctru/include/c3d/mtxstack.h \
+ C:/devkitPro/libctru/include/c3d/uniforms.h \
+ C:/devkitPro/libctru/include/c3d/attribs.h \
+ C:/devkitPro/libctru/include/c3d/buffers.h \
+ C:/devkitPro/libctru/include/c3d/base.h \
+ C:/devkitPro/libctru/include/c3d/texenv.h \
+ C:/devkitPro/libctru/include/c3d/effect.h \
+ C:/devkitPro/libctru/include/c3d/texture.h \
+ C:/devkitPro/libctru/include/c3d/proctex.h \
+ C:/devkitPro/libctru/include/c3d/light.h \
+ C:/devkitPro/libctru/include/c3d/lightlut.h \
+ C:/devkitPro/libctru/include/c3d/fog.h \
+ C:/devkitPro/libctru/include/c3d/framebuffer.h \
+ C:/devkitPro/libctru/include/c3d/renderqueue.h \
+ C:/git/personal/dagger_3ds/source/camera.h
 C:/devkitPro/libctru/include/3ds.h:
 C:/devkitPro/libctru/include/3ds/types.h:
 C:/devkitPro/libctru/include/3ds/result.h:
@@ -173,3 +192,22 @@ C:/devkitPro/libctru/include/3ds/romfs.h:
 C:/devkitPro/libctru/include/3ds/font.h:
 C:/devkitPro/libctru/include/3ds/gdbhio_dev.h:
 C:/devkitPro/libctru/include/3ds/3dslink.h:
+C:/git/personal/dagger_3ds/source/render.h:
+C:/devkitPro/libctru/include/citro3d.h:
+C:/devkitPro/libctru/include/c3d/types.h:
+C:/devkitPro/libctru/include/c3d/maths.h:
+C:/devkitPro/libctru/include/c3d/mtxstack.h:
+C:/devkitPro/libctru/include/c3d/uniforms.h:
+C:/devkitPro/libctru/include/c3d/attribs.h:
+C:/devkitPro/libctru/include/c3d/buffers.h:
+C:/devkitPro/libctru/include/c3d/base.h:
+C:/devkitPro/libctru/include/c3d/texenv.h:
+C:/devkitPro/libctru/include/c3d/effect.h:
+C:/devkitPro/libctru/include/c3d/texture.h:
+C:/devkitPro/libctru/include/c3d/proctex.h:
+C:/devkitPro/libctru/include/c3d/light.h:
+C:/devkitPro/libctru/include/c3d/lightlut.h:
+C:/devkitPro/libctru/include/c3d/fog.h:
+C:/devkitPro/libctru/include/c3d/framebuffer.h:
+C:/devkitPro/libctru/include/c3d/renderqueue.h:
+C:/git/personal/dagger_3ds/source/camera.h:

@@ -104,7 +104,8 @@ main.o: C:/git/personal/dagger_3ds/source/main.cpp \
  C:/devkitPro/libctru/include/c3d/fog.h \
  C:/devkitPro/libctru/include/c3d/framebuffer.h \
  C:/devkitPro/libctru/include/c3d/renderqueue.h \
- C:/git/personal/dagger_3ds/source/camera.h
+ C:/git/personal/dagger_3ds/source/camera.h \
+ C:/git/personal/dagger_3ds/source/mesh.h
 C:/devkitPro/libctru/include/3ds.h:
 C:/devkitPro/libctru/include/3ds/types.h:
 C:/devkitPro/libctru/include/3ds/result.h:
@@ -211,3 +212,4 @@ C:/devkitPro/libctru/include/c3d/fog.h:
 C:/devkitPro/libctru/include/c3d/framebuffer.h:
 C:/devkitPro/libctru/include/c3d/renderqueue.h:
 C:/git/personal/dagger_3ds/source/camera.h:
+C:/git/personal/dagger_3ds/source/mesh.h:

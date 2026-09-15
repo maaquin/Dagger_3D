@@ -1,0 +1,177 @@
+01 — Consolidar el motor base [x]
+Refinar Renderer, cámara, Mesh y pipeline de renderizado.
+Input de 3DS.
+Gestión básica de memoria.
+Crear una escena de prueba estable.
+Resultado: motor 3D funcional sobre la 3DS.
+
+02 — Acceso a los archivos de Daggerfall [ ]
+Sistema de lectura binaria.
+BsaReader.
+Lectura directa desde SD.
+Extracción de un recurso individual.
+Resultado: el programa puede abrir y extraer datos reales de Daggerfall.
+
+03 — Interpretar ARCH3D.BSA [ ]
+Estructura de registros.
+Vértices, caras, UVs y referencias de textura.
+Convertir los datos a estructuras internas.
+Resultado: cargar y renderizar un modelo 3D real de Daggerfall.
+
+04 — Sistema de texturas [ ]
+TEXTURE.XXX.
+Paletas de 8 bits.
+Conversión al formato utilizado por la 3DS.
+Cache de texturas.
+Resultado: modelos reales con sus texturas originales.
+
+05 — Construcción de escenarios [ ]
+Interpretar BLOCKS.BSA.
+Implementar .RDB.
+Transformaciones de objetos.
+Ensamblaje de modelos ARCH3D.
+Resultado: reconstruir una habitación/dungeon real.
+
+06 — Primera dungeon jugable [ ]
+Generar la dungeon completa.
+Cámara y movimiento FPS.
+Colisiones.
+Gravedad.
+Interacción básica.
+Resultado: caminar dentro de una dungeon real de Daggerfall en la 3DS.
+
+07 — MAPS.BSA y sistema de mundo [ ]
+Regiones.
+Localizaciones.
+Coordenadas.
+Relación entre exteriores y dungeons.
+Carga/descarga de localizaciones.
+Resultado: navegar entre localizaciones reales del mundo.
+
+08 — Terreno y exteriores [ ]
+WOODS.WLD.
+Alturas.
+Terreno.
+RMB.
+Vegetación y objetos exteriores.
+Primer sistema de streaming.
+Resultado: explorar un exterior real de Daggerfall.
+
+09 — Jugador y entidades [ ]
+Stats y habilidades.
+NPCs.
+Monstruos.
+Spawning.
+Animaciones/sprites.
+Resultado: mundo con entidades funcionales.
+
+10 — Items, inventario y equipamiento [ ]
+Armas.
+Armaduras.
+Consumibles.
+Inventario.
+Equipamiento.
+Objetos interactuables.
+Resultado: ciclo básico de exploración + loot.
+
+11 — Combate [ ]
+Ataques.
+Colisiones de combate.
+Daño.
+Fatiga.
+IA básica.
+Magia inicial.
+Resultado: combatir y derrotar enemigos.
+
+12 — Simulación del mundo [ ]
+Reloj.
+Calendario.
+Día/noche.
+Viajes.
+Clima.
+Tiendas y horarios.
+Resultado: el mundo deja de ser estático.
+
+13 — Facciones y reputación [ ]
+Facciones.
+Relaciones.
+Reputación.
+Gremios y templos.
+Crimen.
+Guardias.
+Resultado: las acciones del jugador afectan al mundo.
+
+14 — Sistema de quests [ ]
+QBN/QRC.
+Parser de quests.
+Representación interna.
+Quest VM.
+Variables, tareas y condiciones.
+Temporizadores.
+Lugares y objetivos.
+Resultado: ejecutar quests reales de Daggerfall.
+
+15 — Diálogos y contenido [ ]
+Mensajes.
+Diálogos.
+Rumores.
+NPCs quest-related.
+Recompensas.
+Resultado: ciclo completo de quest.
+
+16 — Persistencia [ ]
+Save/load.
+Estado del jugador.
+Inventario.
+Mundo.
+Facciones.
+Quests activas.
+Resultado: partida persistente.
+
+17 — Interfaz 3DS [ ]
+Inventario táctil.
+Estadísticas.
+Equipamiento.
+Libro de hechizos.
+Mapa mundial.
+Mapa 3D de dungeons.
+Resultado: integración real de la segunda pantalla.
+
+18 — Streaming y optimización [ ]
+Cache de assets.
+Gestión de RAM.
+Streaming de mundo.
+Optimización de draw calls.
+Carga desde SD.
+CPU/GPU profiling.
+Resultado: rendimiento estable en Old 3DS.
+
+19 — Integración total [ ]
+Main quest.
+Guilds.
+Templos.
+Ciudades.
+Dungeons.
+Viajes.
+Economía.
+Sistemas restantes.
+Resultado: Daggerfall jugable de principio a fin.
+
+20 — Pulido y compatibilidad [ ]
+Bugs.
+Edge cases.
+Save compatibility.
+Rendimiento.
+Audio/video.
+Controles.
+Compatibilidad Old/New 3DS.
+Resultado: una versión realmente distribuible.
+
+21 — Release [ ]
+Instalador/CIA.
+Configuración inicial.
+Detección de archivos originales.
+README.
+Documentación.
+Créditos.
+Resultado: alguien mete sus datos legítimos de Daggerfall en la SD, instala tu CIA y juega.

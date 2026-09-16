@@ -56,7 +56,7 @@ void Renderer::init()
     C3D_DepthTest(true, GPU_GEQUAL, GPU_WRITE_ALL);
 }
 
-void Renderer::renderFrame(const Camera &cam, const Mesh &mesh, const C3D_Mtx &model)
+void Renderer::renderFrame(const Camera &cam, const Mesh &mesh, const C3D_Mtx &model, ResourceManager &resourceManager)
 {
     C3D_Mtx view;
     cameraViewMatrix(cam, &view);
@@ -78,7 +78,28 @@ void Renderer::renderFrame(const Camera &cam, const Mesh &mesh, const C3D_Mtx &m
     BufInfo_Add(bufInfo, mesh.vbo_data, sizeof(Vertex), 3, 0x210);
 
     C3D_FVUnifMtx4x4(GPU_VERTEX_SHADER, uLoc_mvp, &mvpTop);
-    C3D_DrawElements(GPU_TRIANGLES, mesh.indexCount, C3D_UNSIGNED_SHORT, mesh.ibo_data);
+
+    C3D_TexEnv *env = C3D_GetTexEnv(0);
+    C3D_CullFace(GPU_CULL_NONE);
+
+    for (const auto &subMesh : mesh.subMeshes)
+    {
+        TextureResource *texRes = resourceManager.getTexture(subMesh.textureId);
+
+        if (texRes && texRes->loaded)
+        {
+            C3D_TexBind(0, &texRes->gpuTexture);
+            C3D_TexEnvSrc(env, C3D_Both, GPU_TEXTURE0, GPU_PRIMARY_COLOR, GPU_PRIMARY_COLOR);
+        }
+        else
+        {
+            C3D_TexBind(0, nullptr);
+            C3D_TexEnvSrc(env, C3D_Both, GPU_PRIMARY_COLOR, GPU_PRIMARY_COLOR, GPU_PRIMARY_COLOR);
+        }
+
+        uint16_t *indexStart = static_cast<uint16_t *>(mesh.ibo_data) + subMesh.indexOffset;
+        C3D_DrawElements(GPU_TRIANGLES, subMesh.indexCount, C3D_UNSIGNED_SHORT, indexStart);
+    }
 
     C3D_FrameEnd(0);
 }

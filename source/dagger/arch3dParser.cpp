@@ -49,7 +49,7 @@ bool Arch3dParser::parse(const std::vector<uint8_t> &rawData,
         const uint8_t *ptPtr = ptr + header.pointOffset;
         for (uint32_t i = 0; i < header.pointCount; ++i)
         {
-            if (ptPtr + 12 - ptr > rawData.size())
+            if ((size_t)(ptPtr + 12 - ptr) > rawData.size())
                 break;
 
             DaggerPoint pt;
@@ -68,11 +68,18 @@ bool Arch3dParser::parse(const std::vector<uint8_t> &rawData,
         const uint8_t *plPtr = ptr + header.planeOffset;
         for (uint32_t i = 0; i < header.planeCount; ++i)
         {
-            if (plPtr + 8 - ptr > rawData.size())
+            if ((size_t)(plPtr + 8 - ptr) > rawData.size())
                 break;
 
-            // El primer byte de la cara nos dice cuántos vértices la forman
+            // byte1: cantidad de vértices
             uint8_t pointCountOnFace = plPtr[0];
+
+            // información de su textura
+            uint16_t textureInfo;
+            memcpy(&textureInfo, plPtr + 2, sizeof(uint16_t));
+
+            uint16_t subImageIndex = textureInfo & 0x007F; // los primeros 7 bits
+            uint16_t textureArchive = (textureInfo >> 7) & 0x01FF;
 
             // Saltamos la mini-cabecera de la cara (8 bytes de metadatos/textura)
             plPtr += 8;
@@ -81,9 +88,16 @@ bool Arch3dParser::parse(const std::vector<uint8_t> &rawData,
             int currentV = 0;
 
             DaggerPlane plane;
+
+            plane.textureArchive = textureArchive;
+            plane.subImageIndex = subImageIndex;
+
+            printf("archivo de textura: %d\n", textureArchive);
+            printf("index de textura: %d\n", subImageIndex);
+
             for (uint8_t v = 0; v < pointCountOnFace; ++v)
             {
-                if (plPtr + 8 - ptr > rawData.size())
+                if ((size_t)(plPtr + 8 - ptr) > rawData.size())
                     break;
 
                 uint32_t pointOffset;
@@ -122,7 +136,5 @@ bool Arch3dParser::parse(const std::vector<uint8_t> &rawData,
             outPlanes.push_back(plane);
         }
     }
-
-    printf("Modelo Listo: %zu Verts, %zu Caras\n", outPoints.size(), outPlanes.size());
     return !outPoints.empty() && !outPlanes.empty();
 }

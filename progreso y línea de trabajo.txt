@@ -18,7 +18,7 @@ Vértices, caras, UVs y referencias de textura.
 Convertir los datos a estructuras internas.
 Resultado: cargar y renderizar un modelo 3D real de Daggerfall.
 
-04 — Sistema de texturas [ ]
+04 — Sistema de texturas [x]
 TEXTURE.XXX.
 Paletas de 8 bits.
 Conversión al formato utilizado por la 3DS.

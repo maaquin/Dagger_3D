@@ -3,6 +3,7 @@
 #include <citro3d.h>
 #include <vector>
 #include <stdint.h>
+#include "resourceManager.h"
 
 struct Vertex {
     float x, y, z;
@@ -24,6 +25,15 @@ struct DaggerPlane {
     std::vector<uint32_t> indices; // Índices a DaggerPoint
     std::vector<float> u;
     std::vector<float> v;
+    
+    uint16_t textureArchive; 
+    uint16_t subImageIndex;
+};
+
+struct SubMesh {
+    TextureId textureId;
+    size_t indexOffset;
+    size_t indexCount;
 };
 
 class Mesh {
@@ -32,6 +42,7 @@ public:
     void* ibo_data;
     int vertexCount;
     int indexCount;
+    std::vector<SubMesh> subMeshes;
 
     Mesh() : vbo_data(nullptr), ibo_data(nullptr), vertexCount(0), indexCount(0) {}
 

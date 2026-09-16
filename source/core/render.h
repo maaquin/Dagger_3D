@@ -7,7 +7,7 @@
 class Renderer {
 public:
     void init();
-    void renderFrame(const Camera& cam, const Mesh& mesh, const C3D_Mtx& model);
+    void renderFrame(const Camera& cam, const Mesh& mesh, const C3D_Mtx& model, ResourceManager& resourceManager);
     void cleanup();
 
 private:

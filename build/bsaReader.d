@@ -1,5 +1,5 @@
-bsaReader.o: C:/git/personal/dagger_3ds/source/bsaReader.cpp \
- C:/git/personal/dagger_3ds/source/BsaReader.h \
+bsaReader.o: C:/git/personal/dagger_3ds/source/dagger/bsaReader.cpp \
+ C:/git/personal/dagger_3ds/source/dagger/BsaReader.h \
  C:/devkitPro/libctru/include/3ds.h \
  C:/devkitPro/libctru/include/3ds/types.h \
  C:/devkitPro/libctru/include/3ds/result.h \
@@ -87,7 +87,7 @@ bsaReader.o: C:/git/personal/dagger_3ds/source/bsaReader.cpp \
  C:/devkitPro/libctru/include/3ds/font.h \
  C:/devkitPro/libctru/include/3ds/gdbhio_dev.h \
  C:/devkitPro/libctru/include/3ds/3dslink.h
-C:/git/personal/dagger_3ds/source/BsaReader.h:
+C:/git/personal/dagger_3ds/source/dagger/BsaReader.h:
 C:/devkitPro/libctru/include/3ds.h:
 C:/devkitPro/libctru/include/3ds/types.h:
 C:/devkitPro/libctru/include/3ds/result.h:

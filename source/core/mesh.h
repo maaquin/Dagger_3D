@@ -7,6 +7,7 @@
 struct Vertex {
     float x, y, z;
     float r, g, b, a;
+    float u, v;
 };
 
 // Estructura intermedia de punto nativo de ARCH3D
@@ -15,16 +16,24 @@ struct DaggerPoint {
 };
 
 // Estructura de cara nativa de ARCH3D
+struct DaggerUV {
+    float u, v;
+};
+
 struct DaggerPlane {
-    std::vector<uint32_t> indices; // Índices a la lista de DaggerPoint
+    std::vector<uint32_t> indices; // Índices a DaggerPoint
+    std::vector<float> u;
+    std::vector<float> v;
 };
 
 class Mesh {
 public:
     void* vbo_data;
+    void* ibo_data;
     int vertexCount;
+    int indexCount;
 
-    Mesh() : vbo_data(nullptr), vertexCount(0) {}
+    Mesh() : vbo_data(nullptr), ibo_data(nullptr), vertexCount(0), indexCount(0) {}
 
     void initFromDaggerData(const std::vector<DaggerPoint>& points, 
                             const std::vector<DaggerPlane>& planes,

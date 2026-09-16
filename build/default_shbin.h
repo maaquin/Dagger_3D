@@ -6,7 +6,7 @@
 extern const uint8_t default_shbin[];
 extern const uint8_t default_shbin_end[];
 #if __cplusplus >= 201103L
-static constexpr size_t default_shbin_size=212;
+static constexpr size_t default_shbin_size=224;
 #else
-static const size_t default_shbin_size=212;
+static const size_t default_shbin_size=224;
 #endif

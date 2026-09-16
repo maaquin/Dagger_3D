@@ -1,6 +1,6 @@
-arch3dParser.o: C:/git/personal/dagger_3ds/source/arch3dParser.cpp \
- C:/git/personal/dagger_3ds/source/Arch3dParser.h \
- C:/git/personal/dagger_3ds/source/mesh.h \
+arch3dParser.o: C:/git/personal/dagger_3ds/source/dagger/arch3dParser.cpp \
+ C:/git/personal/dagger_3ds/source/dagger/Arch3dParser.h \
+ C:/git/personal/dagger_3ds/source/core/mesh.h \
  C:/devkitPro/libctru/include/3ds.h \
  C:/devkitPro/libctru/include/3ds/types.h \
  C:/devkitPro/libctru/include/3ds/result.h \
@@ -105,8 +105,8 @@ arch3dParser.o: C:/git/personal/dagger_3ds/source/arch3dParser.cpp \
  C:/devkitPro/libctru/include/c3d/fog.h \
  C:/devkitPro/libctru/include/c3d/framebuffer.h \
  C:/devkitPro/libctru/include/c3d/renderqueue.h
-C:/git/personal/dagger_3ds/source/Arch3dParser.h:
-C:/git/personal/dagger_3ds/source/mesh.h:
+C:/git/personal/dagger_3ds/source/dagger/Arch3dParser.h:
+C:/git/personal/dagger_3ds/source/core/mesh.h:
 C:/devkitPro/libctru/include/3ds.h:
 C:/devkitPro/libctru/include/3ds/types.h:
 C:/devkitPro/libctru/include/3ds/result.h:

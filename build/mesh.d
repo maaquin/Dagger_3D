@@ -1,5 +1,5 @@
-mesh.o: C:/git/personal/dagger_3ds/source/mesh.cpp \
- C:/git/personal/dagger_3ds/source/mesh.h \
+mesh.o: C:/git/personal/dagger_3ds/source/core/mesh.cpp \
+ C:/git/personal/dagger_3ds/source/core/mesh.h \
  C:/devkitPro/libctru/include/3ds.h \
  C:/devkitPro/libctru/include/3ds/types.h \
  C:/devkitPro/libctru/include/3ds/result.h \
@@ -104,7 +104,7 @@ mesh.o: C:/git/personal/dagger_3ds/source/mesh.cpp \
  C:/devkitPro/libctru/include/c3d/fog.h \
  C:/devkitPro/libctru/include/c3d/framebuffer.h \
  C:/devkitPro/libctru/include/c3d/renderqueue.h
-C:/git/personal/dagger_3ds/source/mesh.h:
+C:/git/personal/dagger_3ds/source/core/mesh.h:
 C:/devkitPro/libctru/include/3ds.h:
 C:/devkitPro/libctru/include/3ds/types.h:
 C:/devkitPro/libctru/include/3ds/result.h:

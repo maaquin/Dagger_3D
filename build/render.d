@@ -1,5 +1,5 @@
-render.o: C:/git/personal/dagger_3ds/source/render.cpp \
- C:/git/personal/dagger_3ds/source/camera.h \
+render.o: C:/git/personal/dagger_3ds/source/core/render.cpp \
+ C:/git/personal/dagger_3ds/source/core/camera.h \
  C:/devkitPro/libctru/include/3ds.h \
  C:/devkitPro/libctru/include/3ds/types.h \
  C:/devkitPro/libctru/include/3ds/result.h \
@@ -104,10 +104,10 @@ render.o: C:/git/personal/dagger_3ds/source/render.cpp \
  C:/devkitPro/libctru/include/c3d/fog.h \
  C:/devkitPro/libctru/include/c3d/framebuffer.h \
  C:/devkitPro/libctru/include/c3d/renderqueue.h \
- C:/git/personal/dagger_3ds/source/mesh.h \
- C:/git/personal/dagger_3ds/source/render.h \
+ C:/git/personal/dagger_3ds/source/core/mesh.h \
+ C:/git/personal/dagger_3ds/source/core/render.h \
  C:/git/personal/dagger_3ds/build/default_shbin.h
-C:/git/personal/dagger_3ds/source/camera.h:
+C:/git/personal/dagger_3ds/source/core/camera.h:
 C:/devkitPro/libctru/include/3ds.h:
 C:/devkitPro/libctru/include/3ds/types.h:
 C:/devkitPro/libctru/include/3ds/result.h:
@@ -212,6 +212,6 @@ C:/devkitPro/libctru/include/c3d/lightlut.h:
 C:/devkitPro/libctru/include/c3d/fog.h:
 C:/devkitPro/libctru/include/c3d/framebuffer.h:
 C:/devkitPro/libctru/include/c3d/renderqueue.h:
-C:/git/personal/dagger_3ds/source/mesh.h:
-C:/git/personal/dagger_3ds/source/render.h:
+C:/git/personal/dagger_3ds/source/core/mesh.h:
+C:/git/personal/dagger_3ds/source/core/render.h:
 C:/git/personal/dagger_3ds/build/default_shbin.h:

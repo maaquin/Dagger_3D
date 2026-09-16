@@ -5,14 +5,14 @@ Gestión básica de memoria.
 Crear una escena de prueba estable.
 Resultado: motor 3D funcional sobre la 3DS.
 
-02 — Acceso a los archivos de Daggerfall [ ]
+02 — Acceso a los archivos de Daggerfall [x]
 Sistema de lectura binaria.
 BsaReader.
 Lectura directa desde SD.
 Extracción de un recurso individual.
 Resultado: el programa puede abrir y extraer datos reales de Daggerfall.
 
-03 — Interpretar ARCH3D.BSA [ ]
+03 — Interpretar ARCH3D.BSA [x]
 Estructura de registros.
 Vértices, caras, UVs y referencias de textura.
 Convertir los datos a estructuras internas.

@@ -1,4 +1,4 @@
-main.o: C:/git/personal/dagger_3ds/source/main.cpp \
+main.o: C:/git/personal/dagger_3ds/source/core/main.cpp \
  C:/devkitPro/libctru/include/3ds.h \
  C:/devkitPro/libctru/include/3ds/types.h \
  C:/devkitPro/libctru/include/3ds/result.h \
@@ -86,7 +86,7 @@ main.o: C:/git/personal/dagger_3ds/source/main.cpp \
  C:/devkitPro/libctru/include/3ds/font.h \
  C:/devkitPro/libctru/include/3ds/gdbhio_dev.h \
  C:/devkitPro/libctru/include/3ds/3dslink.h \
- C:/git/personal/dagger_3ds/source/render.h \
+ C:/git/personal/dagger_3ds/source/core/render.h \
  C:/devkitPro/libctru/include/citro3d.h \
  C:/devkitPro/libctru/include/c3d/types.h \
  C:/devkitPro/libctru/include/c3d/maths.h \
@@ -104,10 +104,13 @@ main.o: C:/git/personal/dagger_3ds/source/main.cpp \
  C:/devkitPro/libctru/include/c3d/fog.h \
  C:/devkitPro/libctru/include/c3d/framebuffer.h \
  C:/devkitPro/libctru/include/c3d/renderqueue.h \
- C:/git/personal/dagger_3ds/source/camera.h \
- C:/git/personal/dagger_3ds/source/mesh.h \
- C:/git/personal/dagger_3ds/source/bsaReader.h \
- C:/git/personal/dagger_3ds/source/arch3dParser.h
+ C:/git/personal/dagger_3ds/source/core/camera.h \
+ C:/git/personal/dagger_3ds/source/core/mesh.h \
+ C:/git/personal/dagger_3ds/source/dagger/bsaReader.h \
+ C:/git/personal/dagger_3ds/source/dagger/arch3dParser.h \
+ C:/git/personal/dagger_3ds/source/dagger/texture/palette.h \
+ C:/git/personal/dagger_3ds/source/dagger/texture/textureParser.h \
+ C:/git/personal/dagger_3ds/source/dagger/texture/textureUtils.h
 C:/devkitPro/libctru/include/3ds.h:
 C:/devkitPro/libctru/include/3ds/types.h:
 C:/devkitPro/libctru/include/3ds/result.h:
@@ -195,7 +198,7 @@ C:/devkitPro/libctru/include/3ds/romfs.h:
 C:/devkitPro/libctru/include/3ds/font.h:
 C:/devkitPro/libctru/include/3ds/gdbhio_dev.h:
 C:/devkitPro/libctru/include/3ds/3dslink.h:
-C:/git/personal/dagger_3ds/source/render.h:
+C:/git/personal/dagger_3ds/source/core/render.h:
 C:/devkitPro/libctru/include/citro3d.h:
 C:/devkitPro/libctru/include/c3d/types.h:
 C:/devkitPro/libctru/include/c3d/maths.h:
@@ -213,7 +216,10 @@ C:/devkitPro/libctru/include/c3d/lightlut.h:
 C:/devkitPro/libctru/include/c3d/fog.h:
 C:/devkitPro/libctru/include/c3d/framebuffer.h:
 C:/devkitPro/libctru/include/c3d/renderqueue.h:
-C:/git/personal/dagger_3ds/source/camera.h:
-C:/git/personal/dagger_3ds/source/mesh.h:
-C:/git/personal/dagger_3ds/source/bsaReader.h:
-C:/git/personal/dagger_3ds/source/arch3dParser.h:
+C:/git/personal/dagger_3ds/source/core/camera.h:
+C:/git/personal/dagger_3ds/source/core/mesh.h:
+C:/git/personal/dagger_3ds/source/dagger/bsaReader.h:
+C:/git/personal/dagger_3ds/source/dagger/arch3dParser.h:
+C:/git/personal/dagger_3ds/source/dagger/texture/palette.h:
+C:/git/personal/dagger_3ds/source/dagger/texture/textureParser.h:
+C:/git/personal/dagger_3ds/source/dagger/texture/textureUtils.h:

@@ -1,10 +1,12 @@
 ; Entradas (registros v0 y v1)
 .alias in_pos v0
 .alias in_clr v1
+.alias in_tcd v2
 
 ; Salidas (posición en pantalla y color)
 .out out_pos position
 .out out_clr color
+.out out_tcd texcoord0
 
 ; Uniforms (matriz enviada desde C++)
 .fvec mvp_mat[4]
@@ -18,6 +20,7 @@
 
     ; Pasar el color directamente al fragment shader
     mov out_clr, in_clr
+    mov out_tcd, in_tcd
 
     end
 .end

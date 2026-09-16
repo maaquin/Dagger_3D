@@ -1,5 +1,5 @@
-camera.o: C:/git/personal/dagger_3ds/source/camera.cpp \
- C:/git/personal/dagger_3ds/source/camera.h \
+camera.o: C:/git/personal/dagger_3ds/source/core/camera.cpp \
+ C:/git/personal/dagger_3ds/source/core/camera.h \
  C:/devkitPro/libctru/include/3ds.h \
  C:/devkitPro/libctru/include/3ds/types.h \
  C:/devkitPro/libctru/include/3ds/result.h \
@@ -104,7 +104,7 @@ camera.o: C:/git/personal/dagger_3ds/source/camera.cpp \
  C:/devkitPro/libctru/include/c3d/fog.h \
  C:/devkitPro/libctru/include/c3d/framebuffer.h \
  C:/devkitPro/libctru/include/c3d/renderqueue.h
-C:/git/personal/dagger_3ds/source/camera.h:
+C:/git/personal/dagger_3ds/source/core/camera.h:
 C:/devkitPro/libctru/include/3ds.h:
 C:/devkitPro/libctru/include/3ds/types.h:
 C:/devkitPro/libctru/include/3ds/result.h:

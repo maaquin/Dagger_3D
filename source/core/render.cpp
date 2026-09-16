@@ -42,8 +42,9 @@ void Renderer::init()
     // atributo 0 = posición (3 floats), atributo 1 = color (4 floats)
     C3D_AttrInfo *attrInfo = C3D_GetAttrInfo();
     AttrInfo_Init(attrInfo);
-    AttrInfo_AddLoader(attrInfo, 0, GPU_FLOAT, 3); // x, y, z
-    AttrInfo_AddLoader(attrInfo, 1, GPU_FLOAT, 4); // r, g, b, a
+    AttrInfo_AddLoader(attrInfo, 0, GPU_FLOAT, 3); // posición x,y,z
+    AttrInfo_AddLoader(attrInfo, 1, GPU_FLOAT, 4); // colores rgba
+    AttrInfo_AddLoader(attrInfo, 2, GPU_FLOAT, 2); // caras uv
 
     // TexEnv: cómo se genera el color final de cada píxel.
     C3D_TexEnv *env = C3D_GetTexEnv(0);
@@ -74,10 +75,10 @@ void Renderer::renderFrame(const Camera &cam, const Mesh &mesh, const C3D_Mtx &m
     // conexión de memoria del mesh con gpu
     C3D_BufInfo *bufInfo = C3D_GetBufInfo();
     BufInfo_Init(bufInfo);
-    BufInfo_Add(bufInfo, mesh.vbo_data, sizeof(Vertex), 2, 0x10);
+    BufInfo_Add(bufInfo, mesh.vbo_data, sizeof(Vertex), 3, 0x210);
 
     C3D_FVUnifMtx4x4(GPU_VERTEX_SHADER, uLoc_mvp, &mvpTop);
-    C3D_DrawArrays(GPU_TRIANGLES, 0, mesh.vertexCount);
+    C3D_DrawElements(GPU_TRIANGLES, mesh.indexCount, C3D_UNSIGNED_SHORT, mesh.ibo_data);
 
     C3D_FrameEnd(0);
 }

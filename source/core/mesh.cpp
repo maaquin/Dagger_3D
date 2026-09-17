@@ -31,9 +31,6 @@ void Mesh::initFromDaggerData(const std::vector<DaggerPoint> &points,
         // revisar si se comparte textura con otra cara
         TextureId planeTexId = {plane.textureArchive, plane.subImageIndex, 0};
 
-        printf("textura plano id: %d\n", planeTexId);
-        printf("textura submesh id: %d\n", currentSubMesh.textureId);
-
         if (!(planeTexId == currentSubMesh.textureId))
         {
             // Guardamos el grupo anterior

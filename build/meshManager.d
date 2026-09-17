@@ -1,6 +1,6 @@
-resourceManager.o: \
- C:/git/personal/dagger_3ds/source/dagger/managers/resourceManager.cpp \
- C:/git/personal/dagger_3ds/source/dagger/managers/resourceManager.h \
+meshManager.o: \
+ C:/git/personal/dagger_3ds/source/dagger/managers/meshManager.cpp \
+ C:/git/personal/dagger_3ds/source/dagger/managers/meshManager.h \
  C:/devkitPro/libctru/include/3ds.h \
  C:/devkitPro/libctru/include/3ds/types.h \
  C:/devkitPro/libctru/include/3ds/result.h \
@@ -105,10 +105,12 @@ resourceManager.o: \
  C:/devkitPro/libctru/include/c3d/fog.h \
  C:/devkitPro/libctru/include/c3d/framebuffer.h \
  C:/devkitPro/libctru/include/c3d/renderqueue.h \
+ C:/git/personal/dagger_3ds/source/core/mesh.h \
+ C:/git/personal/dagger_3ds/source/dagger/managers/resourceManager.h \
  C:/git/personal/dagger_3ds/source/dagger/texture/palette.h \
- C:/git/personal/dagger_3ds/source/dagger/texture/textureParser.h \
- C:/git/personal/dagger_3ds/source/dagger/texture/textureUtils.h
-C:/git/personal/dagger_3ds/source/dagger/managers/resourceManager.h:
+ C:/git/personal/dagger_3ds/source/dagger/bsaReader.h \
+ C:/git/personal/dagger_3ds/source/dagger/arch3dParser.h
+C:/git/personal/dagger_3ds/source/dagger/managers/meshManager.h:
 C:/devkitPro/libctru/include/3ds.h:
 C:/devkitPro/libctru/include/3ds/types.h:
 C:/devkitPro/libctru/include/3ds/result.h:
@@ -213,6 +215,8 @@ C:/devkitPro/libctru/include/c3d/lightlut.h:
 C:/devkitPro/libctru/include/c3d/fog.h:
 C:/devkitPro/libctru/include/c3d/framebuffer.h:
 C:/devkitPro/libctru/include/c3d/renderqueue.h:
+C:/git/personal/dagger_3ds/source/core/mesh.h:
+C:/git/personal/dagger_3ds/source/dagger/managers/resourceManager.h:
 C:/git/personal/dagger_3ds/source/dagger/texture/palette.h:
-C:/git/personal/dagger_3ds/source/dagger/texture/textureParser.h:
-C:/git/personal/dagger_3ds/source/dagger/texture/textureUtils.h:
+C:/git/personal/dagger_3ds/source/dagger/bsaReader.h:
+C:/git/personal/dagger_3ds/source/dagger/arch3dParser.h:

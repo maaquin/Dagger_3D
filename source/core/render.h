@@ -3,11 +3,12 @@
 #include <citro3d.h>  // gpu
 #include "camera.h"
 #include "mesh.h"
+#include "meshManager.h"
 
 class Renderer {
 public:
     void init();
-    void renderFrame(const Camera& cam, const Mesh& mesh, const C3D_Mtx& model, ResourceManager& resourceManager);
+    void renderFrame(const Camera& cam, const MeshResource& mesh, const C3D_Mtx& model, ResourceManager& resourceManager);
     void cleanup();
 
 private:

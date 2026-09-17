@@ -1,7 +1,7 @@
 #include "resourceManager.h"
 #include <cstdio>
-#include "textureParser.h" // O la ruta donde tengas tu TextureParser
-#include "textureUtils.h"  // O la ruta donde tengas tu TextureUtils
+#include "textureParser.h"
+#include "textureUtils.h"
 #include "palette.h"
 
 ResourceManager::ResourceManager()
@@ -55,7 +55,6 @@ TextureResource *ResourceManager::getTexture(const TextureId &id)
     }
     else
     {
-        // NUEVO: Que nos avise si no encuentra el archivo
         printf("ERROR: No se pudo cargar %s index %d\n", texPath, id.record);
     }
 

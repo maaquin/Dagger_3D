@@ -8,6 +8,7 @@
 #include "textureParser.h"
 #include "textureUtils.h"
 #include "resourceManager.h"
+#include "meshManager.h"
 
 int main(int argc, char **argv)
 {
@@ -19,30 +20,18 @@ int main(int argc, char **argv)
     cameraInit(cam);
 
     // inicialización de mesh
-    Mesh mesh;
     C3D_Mtx locationMesh;
     Mtx_Identity(&locationMesh);
 
     consoleInit(GFX_BOTTOM, NULL);
 
     BsaReader bsa;
-    if (bsa.open("sdmc:/3ds/DAGGER/ARENA2/ARCH3D.BSA"))
-    {
+    bsa.open("sdmc:/3ds/DAGGER/ARENA2/ARCH3D.BSA");
+    MeshManager meshManager;
+    meshManager.setBsaReader(&bsa);
 
-        // Extraer el registro 0 de prueba
-        std::vector<uint8_t> buffer;
-        if (bsa.extractRecord(105, buffer))
-        {
-            std::vector<DaggerPoint> points;
-            std::vector<DaggerPlane> planes;
-
-            if (Arch3dParser::parse(buffer, points, planes))
-            {
-                // Pasamos los datos leídos a la GPU
-                mesh.initFromDaggerData(points, planes, 64.0f);
-            }
-        }
-    }
+    // test mesh
+    MeshResource *testMesh = meshManager.getMesh({105}, 64.0);
 
     // texturas
     Palette palette;
@@ -57,7 +46,6 @@ int main(int argc, char **argv)
     C3D_TexEnvOpRgb(env, GPU_TEVOP_RGB_SRC_COLOR, GPU_TEVOP_RGB_SRC_COLOR, GPU_TEVOP_RGB_SRC_COLOR);
     C3D_TexEnvOpAlpha(env, GPU_TEVOP_A_SRC_ALPHA, GPU_TEVOP_A_SRC_ALPHA, GPU_TEVOP_A_SRC_ALPHA);
     C3D_TexEnvFunc(env, C3D_Both, GPU_REPLACE);
-    
 
     // juego
     while (aptMainLoop())
@@ -79,7 +67,10 @@ int main(int argc, char **argv)
         // printf("Pitch: %f Yaw: %f              \n", cam.pitch, cam.yaw);
 
         // renderizado
-        renderer.renderFrame(cam, mesh, locationMesh, resourceManager);
+        if (testMesh)
+        {
+            renderer.renderFrame(cam, *testMesh, locationMesh, resourceManager);
+        }
     }
 
     // limpieza

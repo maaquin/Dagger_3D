@@ -104,7 +104,7 @@ mesh.o: C:/git/personal/dagger_3ds/source/core/mesh.cpp \
  C:/devkitPro/libctru/include/c3d/fog.h \
  C:/devkitPro/libctru/include/c3d/framebuffer.h \
  C:/devkitPro/libctru/include/c3d/renderqueue.h \
- C:/git/personal/dagger_3ds/source/dagger/resourceManager.h \
+ C:/git/personal/dagger_3ds/source/dagger/managers/resourceManager.h \
  C:/git/personal/dagger_3ds/source/dagger/texture/palette.h
 C:/git/personal/dagger_3ds/source/core/mesh.h:
 C:/devkitPro/libctru/include/3ds.h:
@@ -211,5 +211,5 @@ C:/devkitPro/libctru/include/c3d/lightlut.h:
 C:/devkitPro/libctru/include/c3d/fog.h:
 C:/devkitPro/libctru/include/c3d/framebuffer.h:
 C:/devkitPro/libctru/include/c3d/renderqueue.h:
-C:/git/personal/dagger_3ds/source/dagger/resourceManager.h:
+C:/git/personal/dagger_3ds/source/dagger/managers/resourceManager.h:
 C:/git/personal/dagger_3ds/source/dagger/texture/palette.h:

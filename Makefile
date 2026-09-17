@@ -33,9 +33,9 @@ include $(DEVKITARM)/3ds_rules
 #---------------------------------------------------------------------------------
 TARGET		:=	$(notdir $(CURDIR))
 BUILD		:=	build
-SOURCES		:=	source source/core source/dagger source/dagger/texture
+SOURCES		:=	source source/core source/dagger source/dagger/texture source/dagger/managers
 DATA		:=	data
-INCLUDES	:=	include source source/core source/dagger source/dagger/texture
+INCLUDES	:=	include source source/core source/dagger source/dagger/texture source/dagger/managers
 GRAPHICS	:=	source/shaders
 GFXBUILD	:=	$(BUILD)
 #ROMFS		:=	romfs

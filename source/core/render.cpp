@@ -56,7 +56,7 @@ void Renderer::init()
     C3D_DepthTest(true, GPU_GEQUAL, GPU_WRITE_ALL);
 }
 
-void Renderer::renderFrame(const Camera &cam, const Mesh &mesh, const C3D_Mtx &model, ResourceManager &resourceManager)
+void Renderer::renderFrame(const Camera &cam, const MeshResource &mesh, const C3D_Mtx &model, ResourceManager &resourceManager)
 {
     C3D_Mtx view;
     cameraViewMatrix(cam, &view);
